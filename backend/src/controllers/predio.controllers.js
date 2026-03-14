@@ -1,4 +1,4 @@
-import { db } from "../../config/db.js";
+
 import PredioModel from "../models/predio.model.js";
 
 export const getPredios = async (req, res) => {
@@ -82,7 +82,7 @@ export const deletePredio = async (req, res) => {
       });
     }
 
-    
+
     const results = await PredioModel.delete(id);
     res.json({ results });
   } catch (error) {
